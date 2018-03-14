@@ -13,5 +13,20 @@ namespace NPGeek.Web.Models
 		public int DailyHigh { get; set; } //high temp for day
 		public string ForeCast { get; set; } //sunny, cloudy, etc
 
+		public string ImageName
+		{
+			get
+			{
+				if (ForeCast == "partly cloudy")
+				{
+					return "partlyCloudy";
+				}
+				else
+				{
+					return ForeCast;
+				}
+			}
+		}
+
 	}
 }

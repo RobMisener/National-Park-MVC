@@ -24,7 +24,8 @@ namespace NPGeek.Web.Controllers
             Park park = dal.GetParkByParkCode(parkCode);
 
             return View("Detail", park);
-                
         }
+
+
     }
 }

@@ -103,6 +103,8 @@
   <ItemGroup>
     <Content Include="Content\backpack.png" />
     <Content Include="Content\backpack2.jpg" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\geek.png" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\parks\cvnp.jpg" />
@@ -116,6 +118,7 @@
     <Content Include="Content\parks\ynp.jpg" />
     <Content Include="Content\parks\ynp2.jpg" />
     <Content Include="Content\scenery.png" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\Styles.css" />
     <Content Include="Content\weather\cloudy.png" />
     <Content Include="Content\weather\partlyCloudy.png" />
@@ -123,8 +126,15 @@
     <Content Include="Content\weather\snow.png" />
     <Content Include="Content\weather\sunny.png" />
     <Content Include="Content\weather\thunderstorms.png" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="schema.sql" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -133,6 +143,8 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ParkController.cs" />
+    <Compile Include="Controllers\WeatherController.cs" />
+    <Compile Include="DAL\IWeatherDAL.cs" />
     <Compile Include="DAL\IParkDAL.cs" />
     <Compile Include="DAL\WeatherDAL.cs" />
     <Compile Include="DAL\SurveyDAL.cs" />
@@ -147,10 +159,17 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <None Include="packages.config" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <Content Include="Views\Park\Detail.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Weather\Index.cshtml" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

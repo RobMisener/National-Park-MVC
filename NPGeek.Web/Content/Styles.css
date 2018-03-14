@@ -7,12 +7,12 @@
 div.park {
     margin: 10px;
     display: grid;
-    grid-template-columns: 40% 60%;
-    grid-template-rows: 20% 10% 70%;
+    grid-template-columns: 40% 60%; /*//assign column width*/
+    grid-template-rows: 20% 10% 70%; /*gridrows , height,*/ 
 }
 
 div.park img {
-    grid-area: 1 / 1 / 4 / 2;
+    grid-area: 1 / 1 / 4 / 2; /*r,c,r,c how much space element takes up*/
 }
 
 div.park h2 {
@@ -26,3 +26,10 @@ div.park h4 {
 div.park p {
     grid-area: 3 / 2 / 4 / 3;
 }
+
+div.park-stats {
+    width: 500px;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 50% 50%; /*//assign column width*/
+ }
