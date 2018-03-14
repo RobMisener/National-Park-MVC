@@ -1,3 +1,28 @@
 ﻿img#logo {
     width: 500px;
 }
+
+/* home page */
+
+div.park {
+    margin: 10px;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 20% 10% 70%;
+}
+
+div.park img {
+    grid-area: 1 / 1 / 4 / 2;
+}
+
+div.park h2 {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+div.park h4 {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+div.park p {
+    grid-area: 3 / 2 / 4 / 3;
+}

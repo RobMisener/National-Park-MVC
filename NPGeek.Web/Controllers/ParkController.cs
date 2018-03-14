@@ -8,23 +8,23 @@ using NPGeek.Web.Models;
 
 namespace NPGeek.Web.Controllers
 {
-    public class HomeController : Controller
+    public class ParkController : Controller
     {
         IParkDAL dal;
 
-        public HomeController(IParkDAL dal)
+        public ParkController(IParkDAL dal)
         {
             this.dal = dal;
         }
 
-        // GET: Home
-        public ActionResult Index()
+
+        // GET: Park
+        public ActionResult Detail(string parkCode)
         {
-            List<Park> parks = dal.GetAllParks();
+            Park park = dal.GetParkByParkCode(parkCode);
 
-            return View("Index", parks);
+            return View("Detail", park);
+                
         }
-
-
     }
 }
