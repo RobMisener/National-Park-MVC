@@ -11,7 +11,7 @@ namespace NPGeek.Web.DAL
 	{
 		string connectionString;
 
-		const string SQL_SelectWeatherByParkCode = ("@Select * from weather where parkCode = @parkCode;");
+		const string SQL_SelectWeatherByParkCode = @"Select * from weather where parkCode = @parkCode;";
 
 		public WeatherDAL(string connectionString)
 		{

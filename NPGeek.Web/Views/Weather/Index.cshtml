@@ -1,6 +1,21 @@
 ﻿@model  List<NPGeek.Web.Models.Weather>
 
 
+<div class="weather">
+    <div class="todays-weather">
+        <img id="weather-img"src="~/Content/weather/@(Model[0].ImageName).png" />
+        <span>High: @Model[0].DailyHigh</span>
+        <span>Low: @Model[0].DailyLow</span>
+        <span class="message">@Model[0].ForecastMessage @Model[0].TempetureMessage</span>
+    </div>
 
-<img src="~/Content/weather/@(Model[0].ImageName).png" />
+    @for (int i = 1; i < Model.Count; i++)
+    {
+        <div class="week-weather">
+            <img id="weather-week-img" src="~/Content/weather/@(Model[i].ImageName).png" />
+            <span>High: @Model[i].DailyHigh</span>
+            <span>Low: @Model[i].DailyLow</span>
+        </div>
 
+    }
+</div>

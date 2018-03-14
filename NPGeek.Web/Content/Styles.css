@@ -33,3 +33,38 @@ div.park-stats {
     display: grid;
     grid-template-columns: 50% 50%; /*//assign column width*/
  }
+
+/* weather */
+
+div.weather {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+}
+
+div.todays-weather {
+    padding: 10px;
+    width: 150px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40% repeat(3, 20%);
+    border: 4px outset forestgreen;
+}
+
+#weather-img {
+    grid-area: 1 / 1 / 2 / 3;
+    width: 100%;
+}
+
+span.message {
+    grid-area: 3 / 1 / 5 / 3;
+}
+
+div.week-weather {
+    width: 100px;
+    border: 4px outset forestgreen;
+}
+
+#weather-week-img {
+    width: 75px;
+}
+

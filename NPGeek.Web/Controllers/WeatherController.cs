@@ -23,7 +23,7 @@ namespace NPGeek.Web.Controllers
 		{
 			List<Weather> weather = dal.GetWeatherByParkCode(parkCode);
 
-			return View("Index", weather);
+			return PartialView("Index", weather);
 		}
 	}
 
