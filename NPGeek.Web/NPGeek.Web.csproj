@@ -101,6 +101,28 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\backpack.png" />
+    <Content Include="Content\backpack2.jpg" />
+    <Content Include="Content\geek.png" />
+    <Content Include="Content\logo.png" />
+    <Content Include="Content\parks\cvnp.jpg" />
+    <Content Include="Content\parks\enp.jpg" />
+    <Content Include="Content\parks\gcnp.jpg" />
+    <Content Include="Content\parks\gnp.jpg" />
+    <Content Include="Content\parks\gsmnp.jpg" />
+    <Content Include="Content\parks\gtnp.jpg" />
+    <Content Include="Content\parks\mrnp.jpg" />
+    <Content Include="Content\parks\rmnp.jpg" />
+    <Content Include="Content\parks\ynp.jpg" />
+    <Content Include="Content\parks\ynp2.jpg" />
+    <Content Include="Content\scenery.png" />
+    <Content Include="Content\Styles.css" />
+    <Content Include="Content\weather\cloudy.png" />
+    <Content Include="Content\weather\partlyCloudy.png" />
+    <Content Include="Content\weather\rain.png" />
+    <Content Include="Content\weather\snow.png" />
+    <Content Include="Content\weather\sunny.png" />
+    <Content Include="Content\weather\thunderstorms.png" />
     <Content Include="Global.asax" />
     <Content Include="schema.sql" />
     <Content Include="Web.config">
@@ -109,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -117,6 +140,8 @@
   <ItemGroup>
     <Content Include="Views\web.config" />
     <None Include="packages.config" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -126,7 +151,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Controllers\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <PropertyGroup>
