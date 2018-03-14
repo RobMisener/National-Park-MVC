@@ -1,0 +1,34 @@
+﻿
+@{
+    ViewBag.Title = "Survey";
+    Layout = "~/Views/Shared/_LayoutPage.cshtml";
+}
+
+<h2>Survey</h2>
+
+<form method="post" action="@Url.Action("SurveyResults", "Survey")">
+
+    <select name="ParkCode">
+        <option value="CVNP">Cuyahoga Valley National Park</option>
+        <option value="ENP">Everglades National Park</option>
+        <option value="GCNP">Grand Canyon National Park</option>
+        <option value="GNP">Glacier National Park</option>
+        <option value="GSMNP">Great Smoky Mountains National Park</option>
+        <option value="GTNP">Grand Teton National Park</option>
+        <option value="MRNP">Mount Rainier National Park</option>
+        <option value="RMNP">Rocky Mountain National Park</option>
+        <option value="YNP">Yellowstone National Park</option>
+        <option value="YNP2">Yosemite National Park</option>
+    </select>
+    Email Address
+    <input type="text" name="EmailAdress" />
+    Home State
+    <input type="text" name="State" />
+    Activity Level
+    <select name="ActivityLevel">
+        <option value="High">High</option>
+        <option value="Medium">Medium</option>
+        <option value="Low">Low</option>
+
+    </select>
+</form>
