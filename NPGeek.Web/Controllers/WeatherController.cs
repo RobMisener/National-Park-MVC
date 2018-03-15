@@ -12,7 +12,9 @@ namespace NPGeek.Web.Controllers
 	{
 		IWeatherDAL dal;
 
-		// GET: Weather
+        // GET: Weather
+
+        //private static string parkCode;
 
 		public WeatherController(IWeatherDAL dal)
 		{
@@ -21,25 +23,42 @@ namespace NPGeek.Web.Controllers
 
 		public ActionResult Index(string parkCode)
 		{
-			List<Weather> weather = dal.GetWeatherByParkCode(parkCode);
+			List<Weather> weathers = dal.GetWeatherByParkCode(parkCode);
 
-			return PartialView("Index", weather);
+            if (GetTempetureChoice() == "Celcius")
+            {
+                foreach(var weather in weathers)
+                {
+                    weather.IsCelcius = true;
+                }
+            }
+
+            return PartialView("Index", weathers);
 		}
+            
+        [HttpPost]
+        public ActionResult Index(string tempUnit, string parkCode)
+        {
+            Session["TempChoice"] = tempUnit;
 
-		public ActionResult ChangeTempUnit(string parkCode, string tempUnit)
-		{
+            return RedirectToAction("Detail","Park", new { parkCode = parkCode });
+        }
 
-			if (tempUnit.ToLower() == "celcius")
-			{
-				Weather.IsCelcius = true;
-			}
-			else
-			{
-				Weather.IsCelcius = false;
-			}
+        private string GetTempetureChoice()
+        {
+            string tempChoice = "Farenheight";
 
-			return RedirectToAction("Index","Weather", parkCode);
-		}
+            if(Session["TempChoice"] == null)
+            {
+                Session["TempChoice"] = "Farenheight";
+            }
+            else
+            {
+                tempChoice = Session["TempChoice"] as string;
+            }
+
+            return tempChoice;
+        }
 
 	}
 

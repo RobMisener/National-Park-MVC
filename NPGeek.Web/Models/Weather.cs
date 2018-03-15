@@ -7,19 +7,21 @@ namespace NPGeek.Web.Models
 {
     public class Weather
     {
-		public static bool IsCelcius { get; set;}
+		public  bool IsCelcius { get; set;}
         public string ParkCode { get; set; }
         public int FiveDayForecastValue { get; set; }
         public int DailyLow { get; set; } //low temp for day
         public int DailyHigh { get; set; } //high temp for day
 
-		public int DisplayDailyLow
+		public double DisplayDailyLow
 		{
 			get
 			{
 				if (IsCelcius)
 				{
-					return ((DailyLow - 32) * (5 / 9));
+                    
+
+					return (DailyLow - 32) * (5.0 / 9.0) ;
 				}
 				else
 				{
@@ -28,13 +30,13 @@ namespace NPGeek.Web.Models
 			}
 		}
 
-		public int DisplayDailyHigh
+		public double DisplayDailyHigh
 		{
 			get
 			{
 				if (IsCelcius)
 				{
-					return ((DailyHigh - 32) * (5 / 9));
+					return (DailyHigh - 32) * (5.0 / 9.0);
 				}
 				else
 				{

@@ -20,17 +20,15 @@
     }
 
 
-    <form method="post" action="@Url.Action("ChangeTempUnit", "Weather", new {parkCode = Model[0].ParkCode})">
+    <form method="post" action="@Url.Action("Index", "Weather")">
+        Change Units
         <select name="tempUnit">
             <option value="Farenheight">Farenheight</option>
             <option value="Celcius">Celcius</option>
         </select>
-        
+        <input type="hidden" name="parkCode" value="@Model[0].ParkCode" />
         <button>Submit</button>
     </form>
-
-
-
 
 
 </div>
