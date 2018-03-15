@@ -7,11 +7,44 @@ namespace NPGeek.Web.Models
 {
     public class Weather
     {
+		public static bool IsCelcius { get; set;}
         public string ParkCode { get; set; }
         public int FiveDayForecastValue { get; set; }
         public int DailyLow { get; set; } //low temp for day
         public int DailyHigh { get; set; } //high temp for day
-        public string ForeCast { get; set; } //sunny, cloudy, etc
+
+		public int DisplayDailyLow
+		{
+			get
+			{
+				if (IsCelcius)
+				{
+					return ((DailyLow - 32) * (5 / 9));
+				}
+				else
+				{
+					return DailyLow;
+				}
+			}
+		}
+
+		public int DisplayDailyHigh
+		{
+			get
+			{
+				if (IsCelcius)
+				{
+					return ((DailyHigh - 32) * (5 / 9));
+				}
+				else
+				{
+					return DailyHigh;
+				}
+			}
+		}
+
+
+		public string ForeCast { get; set; } //sunny, cloudy, etc
 
         public string ImageName
         {

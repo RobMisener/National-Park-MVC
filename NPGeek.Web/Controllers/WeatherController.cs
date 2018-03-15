@@ -25,6 +25,22 @@ namespace NPGeek.Web.Controllers
 
 			return PartialView("Index", weather);
 		}
+
+		public ActionResult ChangeTempUnit(string parkCode, string tempUnit)
+		{
+
+			if (tempUnit.ToLower() == "celcius")
+			{
+				Weather.IsCelcius = true;
+			}
+			else
+			{
+				Weather.IsCelcius = false;
+			}
+
+			return RedirectToAction("Index","Weather", parkCode);
+		}
+
 	}
 
 

@@ -3,9 +3,9 @@
 
 <div class="weather">
     <div class="todays-weather">
-        <img id="weather-img"src="~/Content/weather/@(Model[0].ImageName).png" />
-        <span>@Model[0].DailyHigh</span>
-        <span>@Model[0].DailyLow</span>
+        <img id="weather-img" src="~/Content/weather/@(Model[0].ImageName).png" />
+        <span>@Model[0].DisplayDailyHigh</span>
+        <span>@Model[0].DisplayDailyLow</span>
         <span class="message">@Model[0].ForecastMessage @Model[0].TempetureMessage</span>
     </div>
 
@@ -13,9 +13,24 @@
     {
         <div class="week-weather">
             <img id="weather-week-img" src="~/Content/weather/@(Model[i].ImageName).png" />
-            <span>High: @Model[i].DailyHigh</span>
-            <span>Low: @Model[i].DailyLow</span>
+            <span>High: @Model[i].DisplayDailyHigh</span>
+            <span>Low: @Model[i].DisplayDailyLow</span>
         </div>
 
     }
+
+
+    <form method="post" action="@Url.Action("ChangeTempUnit", "Weather", new {parkCode = Model[0].ParkCode})">
+        <select name="tempUnit">
+            <option value="Farenheight">Farenheight</option>
+            <option value="Celcius">Celcius</option>
+        </select>
+        
+        <button>Submit</button>
+    </form>
+
+
+
+
+
 </div>
