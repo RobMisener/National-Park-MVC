@@ -60,11 +60,14 @@ span.message {
 }
 
 div.week-weather {
-    width: 100px;
+    font-family: sans-serif;
+    padding: 10px;
+    height: 150px;
+    width: 125px;
     border: 4px outset forestgreen;
 }
 
 #weather-week-img {
-    width: 75px;
+    width: 100px;
 }
 

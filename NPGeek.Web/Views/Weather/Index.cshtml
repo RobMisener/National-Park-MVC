@@ -4,8 +4,8 @@
 <div class="weather">
     <div class="todays-weather">
         <img id="weather-img"src="~/Content/weather/@(Model[0].ImageName).png" />
-        <span>High: @Model[0].DailyHigh</span>
-        <span>Low: @Model[0].DailyLow</span>
+        <span>@Model[0].DailyHigh</span>
+        <span>@Model[0].DailyLow</span>
         <span class="message">@Model[0].ForecastMessage @Model[0].TempetureMessage</span>
     </div>
 
