@@ -1,4 +1,4 @@
-﻿@model  NPGeek.Web.Models.Survey
+﻿@model List<NPGeek.Web.Models.Park>
 
 
 
@@ -9,27 +9,22 @@
 
 <h2>Survey</h2>
 
-<form method="post" action="@Url.Action("Survey", "Survey" )">
+<form method="post" action="@Url.Action("Survey", "Survey")">
     What is your favorite park?
-    <select name="ParkCode">
-        <option value="CVNP">Cuyahoga Valley National Park</option>
-        <option value="ENP">Everglades National Park</option>
-        <option value="GCNP">Grand Canyon National Park</option>
-        <option value="GNP">Glacier National Park</option>
-        <option value="GSMNP">Great Smoky Mountains National Park</option>
-        <option value="GTNP">Grand Teton National Park</option>
-        <option value="MRNP">Mount Rainier National Park</option>
-        <option value="RMNP">Rocky Mountain National Park</option>
-        <option value="YNP">Yellowstone National Park</option>
-        <option value="YNP2">Yosemite National Park</option>
+    <select name="parkCode">
+        @foreach(var park in Model)
+        {
+            <option value="@park.ParkCode">@park.Name</option>
+        }
     </select>
     Email Address
-    <input type="text" name="EmailAdress" />
+    <input type="text" name="email" />
     Home State
-    <input type="text" name="State" />
+    <input type="text" name="state" />
     Activity Level
-    <select name="ActivityLevel">
+    <select name="activityLevel">
         <option value="ExtremelyActive">Extremely Active</option>
+        <option value="Active">Active</option>
         <option value="Sedentary">Sedentary</option>
         <option value="Inactive">Inactive</option>
     </select>

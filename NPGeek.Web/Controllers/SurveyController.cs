@@ -13,27 +13,52 @@ namespace NPGeek.Web.Controllers
     public class SurveyController : Controller
     {
 
-		ISurveyDAL dal;
+		ISurveyDAL sDal;
+        IParkDAL pDal;
 
-		public SurveyController(ISurveyDAL dal)
+		public SurveyController(ISurveyDAL sDal, IParkDAL pDal)
 		{
-			this.dal = dal;
+			this.sDal = sDal;
+            this.pDal = pDal;
 		}
 
         // GET: Survey
 
         public ActionResult Survey()
 		{
-            return View("Survey");
+            List<Park> parks = pDal.GetAllParks();
+
+            return View("Survey", parks);
         }
 
 		[HttpPost]
-		public ActionResult Survey(Survey survey)
+		public ActionResult Survey(string parkCode, string email, string state, string activityLevel)
 		{
-			dal.InsertSurveyIntoTable(survey);
-			return RedirectToAction("SurveyResult", survey);
+            Survey survey = new Survey
+            {
+                ParkCode = parkCode,
+                EmailAddress = email,
+                State = state,
+                ActivityLevel = activityLevel
+            };
+
+            sDal.InsertSurveyIntoTable(survey);
+			return RedirectToAction("SurveyResult");
 		}
 
+        public ActionResult SurveyResult()
+        {
+            List<SurveyResult> results = sDal.GetSurveyCountOfParks();
+            if (results != null)
+            {
+                return View("SurveyResult", results);
+            }
+            else
+            {
+                return View("SurveyResult");
+            }
+            
+        }
 
     }
 }

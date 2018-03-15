@@ -9,19 +9,18 @@ namespace NPGeek.Web.DAL
 {
 	public class SurveyDAL : ISurveyDAL
 	{
-		string connectionString;
-		string SQL_InsertIntoSurvey = @"INSERT INTO survey_result VALUES (@parkCode,@email,@state,@activityLevel)";
-		
-		public SurveyDAL(string connectionString)
+		private string connectionString;
+		const string SQL_InsertIntoSurvey = @"INSERT INTO survey_result VALUES (@parkCode, @email, @state, @activityLevel)";
+        const string SQL_SelectSurveyCountByParkCode =
+            @"SELECT count(parkName) as surveyCount, park.parkCode, parkName from survey_result " +
+            "join park on survey_result.parkCode = park.parkCode " +
+            "group by parkname, park.parkCode ORDER BY surveyCount DESC;";
+
+
+        public SurveyDAL(string connectionString)
 		{
 			this.connectionString = connectionString;
 		}
-		
-	//surveyId int identity(1,1) not null,
-	//parkCode varchar(10) not null,
-	//emailAddress varchar(100) not null,
-	//state varchar(30) not null,
-	//activityLevel varchar(100) not null,
 	
 		public bool InsertSurveyIntoTable(Survey survey)
 		{
@@ -49,7 +48,40 @@ namespace NPGeek.Web.DAL
 
 		}
 
-		//get survey count of park by --- joined by 
+		public List<SurveyResult> GetSurveyCountOfParks()
+        {
+            List<SurveyResult> results = new List<SurveyResult>();
+
+            try
+            {
+                using (SqlConnection conn = new SqlConnection(connectionString))
+                {
+                    conn.Open();
+
+                    SqlCommand cmd = new SqlCommand(SQL_SelectSurveyCountByParkCode, conn);
+
+                    SqlDataReader reader = cmd.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        SurveyResult result = new SurveyResult
+                        {
+                            SurveyCount = Convert.ToInt32(reader["surveyCount"]),
+                            ParkCode = Convert.ToString(reader["parkCode"]),
+                            ParkName = Convert.ToString(reader["parkName"])
+                        };
+
+                        results.Add(result);
+                    }
+
+                    return results;
+                }
+            }
+            catch (SqlException)
+            {
+                throw;
+            }
+        }
 
 
 

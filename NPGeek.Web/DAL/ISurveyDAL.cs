@@ -9,5 +9,6 @@ namespace NPGeek.Web.DAL
     public interface ISurveyDAL
     {
         bool InsertSurveyIntoTable(Survey survey);
+        List<SurveyResult> GetSurveyCountOfParks();
     }
 }
