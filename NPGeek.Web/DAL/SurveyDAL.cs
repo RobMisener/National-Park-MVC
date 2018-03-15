@@ -7,7 +7,7 @@ using NPGeek.Web.Models;
 
 namespace NPGeek.Web.DAL
 {
-	public class SurveyDAL
+	public class SurveyDAL : ISurveyDAL
 	{
 		string connectionString;
 		string SQL_InsertIntoSurvey = @"INSERT INTO survey_result VALUES (@parkCode,@email,@state,@activityLevel)";
@@ -36,6 +36,7 @@ namespace NPGeek.Web.DAL
 					cmd.Parameters.AddWithValue("@email", survey.EmailAddress);
 					cmd.Parameters.AddWithValue("@state", survey.State);
 					cmd.Parameters.AddWithValue("@activityLevel", survey.ActivityLevel);
+					
 					cmd.ExecuteNonQuery();
 					return true;
 				}
@@ -47,6 +48,10 @@ namespace NPGeek.Web.DAL
 			}
 
 		}
+
+		//get survey count of park by --- joined by 
+
+
 
 	}
 }
