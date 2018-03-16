@@ -24,9 +24,6 @@ a#logo img {
         color: #30c634;
     }
 
-
-
-
 /* home page */
 div.home {
     display: grid;
@@ -233,4 +230,44 @@ div.week-weather {
     padding: 10px;
     border-radius: 5px;
     background-color: rgba(48, 198, 52, 0.70);
+}
+
+
+/*survey*/
+
+.survey-results {
+margin-top: 20px;
+    display: grid;
+    grid-template-columns: 40% 40% 20%;
+    color: white;
+}
+
+img.survey-img {
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+div.survey-results h2 {
+    margin: auto;
+    font-size: 20px;
+    color: white;
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+div.survey-results span{
+    margin: auto;
+}
+
+h4 {
+    margin:auto;
+    font-size: 30px;
+    color: white;
+}
+
+div.surveyWrapper{
+    max-width:800px;
+    margin: auto;
+
 }
