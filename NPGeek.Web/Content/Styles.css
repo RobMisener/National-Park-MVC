@@ -32,18 +32,21 @@ div.home {
     display: grid;
     grid-template-columns: 80% 20%;
     background-color: #5e3d14;
+    z-index: -3;
+    background-image: url("camo.jpg");
 }
 
 #waterfall {
-   grid-area: 1 / 2 / 10 / 3;
-   position: sticky;
-   background-image: url("waterfall.JPG");
-   background-attachment: fixed;
-   background-repeat: no-repeat;
-   background-position: top right;
-   right: 20px;
-   border: 8px ridge white;
-   width: 280px;
+    grid-area: 1 / 2 / 10 / 3;
+    position: sticky;
+    background-image: url("waterfall.JPG");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top right;
+    right: 20px;
+    width: 280px;
+    border-radius: 10px;
+    box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.86);
 }
 
 div.park {
@@ -61,6 +64,8 @@ div.park {
     div.park img {
         grid-area: 1 / 1 / 4 / 2; /*r,c,r,c how much space element takes up*/
         width: 90%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
     }
 
 div.park-intro {
@@ -69,6 +74,9 @@ div.park-intro {
     padding: 10px;
     clear: left;
     background-color: #272727;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
+    z-index: 5;
 }
 
 a.name {
@@ -97,7 +105,9 @@ div.park p {
 }
 
 
-
+div.park-detail {
+    background-color: white;
+}
 
 div.park-stats {
     width: 500px;
@@ -112,10 +122,16 @@ div.park-stats {
 div.descriptionWrapper {
     background-color: white;
     display: grid;
+    min-width: 1100px;
     grid-template-columns: 50% 50%;
     grid-template-rows: 50% 50%;
+    background-color: #5e3d14;
+    
 }
 
+div.park-detail {
+    background-image: url("camo.jpg");
+}
 
 div.weather {
     margin-top: 40px;
@@ -128,22 +144,44 @@ img.parkPic {
     grid-area: 1 / 1 / 3 / 2;
     width: 80%;
     margin: auto;
+    background-color: #5e3d14;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
 }
 
 div.detail-header {
+    color: white;
     grid-area: 1 / 2 / 2 / 3;
+    background-color: #5e3d14;
+    max-width: 500px;
+    border-radius: 5px;
 }
 
 div.park-stats {
     margin-top: 30px;
+    padding: 10px;
     grid-area: 2 / 2 / 3 / 3;
-    background-color:lightgreen;
+    background-color: lightgreen;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
 }
 
-div.park-description{
-    margin-top:30px;
+div.park-description {
+    margin-top: 30px;
+    background-color: #b79662;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.86);
 }
 
+div.weather {
+    grid-gap: 20px;
+    padding: 30px;
+    min-width: 800px;
+    margin: auto;
+    background-color: rgba(48, 198, 52, 0.52);
+    border-radius: 10px;
+}
 
 div.todays-weather {
     background-color: lightblue;
@@ -152,7 +190,9 @@ div.todays-weather {
     display: grid;
     grid-template-columns: 50% 50%;
     grid-template-rows: 40% repeat(3, 20%);
-    border: 3px outset #30c634;
+    border-radius: 10px;
+    border: 4px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
 }
 
 #weather-img {
@@ -160,9 +200,11 @@ div.todays-weather {
     width: 100%;
     border-radius: 10px;
     border-color: black;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
 }
 
 span.message {
+    padding: 10px;
     grid-area: 3 / 1 / 5 / 3;
 }
 
@@ -174,9 +216,21 @@ div.week-weather {
     padding: 10px;
     height: 180px;
     width: 125px;
-    border: 2px outset #30c634;
+    border: 4px solid white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
 }
 
 #weather-week-img {
     width: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.85);
+}
+
+.weather form {
+    color: white;
+    grid-area: 2 / 5 / 3 / 6;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: rgba(48, 198, 52, 0.70);
 }

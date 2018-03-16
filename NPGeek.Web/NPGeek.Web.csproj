@@ -105,6 +105,7 @@
     <Content Include="Content\backpack2.jpg" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\camo.jpg" />
     <Content Include="Content\geek.png" />
     <Content Include="Content\logo.png" />
     <Content Include="Content\parks\cvnp.jpg" />
