@@ -7,25 +7,32 @@
 
 <div class="park-detail">
 
-    <img src="~/Content/parks/@(Model.ParkCode).jpg" />
-    <div class="detail-header">
-        <h2>@Model.Name</h2>
-        <span>@Model.State</span>
-        <span>Founded in @Model.YearFounded</span>
+
+
+    <div class="descriptionWrapper">
+        <img class="parkPic" src="~/Content/parks/@(Model.ParkCode).jpg" />
+        <div class="detail-header">
+            <h2>@Model.Name</h2>
+            <span>@Model.State</span>
+            <span>Founded in @Model.YearFounded</span>
+            <div class="park-description">
+                @Model.ParkDescription
+            </div>
+
+            <div class="park-stats">
+                <span>Acreage: @Model.Acreage miles</span>
+                <span>Elevation: @Model.Elevation ft</span>
+                <span>Miles of Trail: @Model.MilesOfTrail miles</span>
+                <span>No. of Campsites: @Model.NumberOfCampsites</span>
+                <span>Climate: @Model.Climate</span>
+                <span>Annual Visitor Count: @Model.AnnualVisitorCount</span>
+                <span>Number of Animal Species: @Model.AnimalSpecies</span>
+                <span>Entry Fee: $@Model.EntryFee</span>
+            </div>
+        </div>
+
     </div>
-    <div class="park-stats">
-        <span>Acreage: @Model.Acreage miles</span>
-        <span>Elevation: @Model.Elevation ft</span>
-        <span>Miles of Trail: @Model.MilesOfTrail miles</span>
-        <span>No. of Campsites: @Model.NumberOfCampsites</span>
-        <span>Climate: @Model.Climate</span>
-        <span>Annual Visitor Count: @Model.AnnualVisitorCount</span>
-        <span>Number of Animal Species: @Model.AnimalSpecies</span>
-        <span>Entry Fee: $@Model.EntryFee</span>
-    </div>
-    <div class="park-description">
-        @Model.ParkDescription
-    </div>
+
 
 
 

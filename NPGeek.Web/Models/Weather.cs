@@ -13,7 +13,7 @@ namespace NPGeek.Web.Models
         public int DailyLow { get; set; } //low temp for day
         public int DailyHigh { get; set; } //high temp for day
 
-		public double DisplayDailyLow
+		public string DisplayDailyLow
 		{
 			get
 			{
@@ -21,26 +21,26 @@ namespace NPGeek.Web.Models
 				{
                     
 
-					return (DailyLow - 32) * (5.0 / 9.0) ;
+					return ( Math.Round((DailyLow - 32) * (5.0 / 9.0) ) ).ToString() + "° C";
 				}
 				else
 				{
-					return DailyLow;
+					return (DailyLow).ToString() + "° F";
 				}
 			}
 		}
 
-		public double DisplayDailyHigh
+		public string DisplayDailyHigh
 		{
 			get
 			{
 				if (IsCelcius)
 				{
-					return (DailyHigh - 32) * (5.0 / 9.0);
+					return ( Math.Round((DailyHigh - 32) * (5.0 / 9.0) )).ToString() + "° C";
 				}
 				else
 				{
-					return DailyHigh;
+					return DailyHigh.ToString() + "° F";
 				}
 			}
 		}
