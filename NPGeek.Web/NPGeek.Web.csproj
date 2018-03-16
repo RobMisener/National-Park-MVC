@@ -120,6 +120,7 @@
     <Content Include="Content\scenery.png" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\Styles.css" />
+    <Content Include="Content\waterfall.JPG" />
     <Content Include="Content\weather\cloudy.png" />
     <Content Include="Content\weather\partlyCloudy.png" />
     <Content Include="Content\weather\rain.png" />

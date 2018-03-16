@@ -1,18 +1,86 @@
-﻿img#logo {
-    width: 500px;
+﻿
+
+#nav-bar {
+    height: 100px;
+    position: sticky;
+    background-color: #2b2b2b;
 }
+
+a#logo img {
+    height: 80px;
+}
+
+#body-background {
+    background-color: #5e3d14;
+}
+
+.nav-icon {
+    margin: 20px 10px 5px 30px;
+    font-size: 30px;
+    display: inline-block;
+}
+
+    .nav-icon a {
+        color: #30c634;
+    }
+
+
+
 
 /* home page */
-
-div.park {
-    margin: 10px;
+div.home {
     display: grid;
-    grid-template-columns: 40% 60%; /*//assign column width*/
-    grid-template-rows: 20% 10% 70%; /*gridrows , height,*/ 
+    grid-template-columns: 80% 20%;
+    background-color: #5e3d14;
 }
 
-div.park img {
-    grid-area: 1 / 1 / 4 / 2; /*r,c,r,c how much space element takes up*/
+#waterfall {
+   grid-area: 1 / 2 / 10 / 3;
+   position: sticky;
+   background-image: url("waterfall.JPG");
+   background-attachment: fixed;
+   background-repeat: no-repeat;
+   background-position: top right;
+   right: 20px;
+   border: 8px ridge white;
+   width: 280px;
+}
+
+div.park {
+    grid-column-start: 1;
+    margin: 20px;
+    padding: 2px;
+    display: grid;
+    max-width: 1200px;
+    min-width: 800px;
+    color: white;
+    grid-template-columns: 40% 40% 20%; /*//assign column width*/
+    grid-template-rows: 20% 10% 70%; /*gridrows , height,*/
+}
+
+    div.park img {
+        grid-area: 1 / 1 / 4 / 2; /*r,c,r,c how much space element takes up*/
+        width: 90%;
+    }
+
+div.park-intro {
+    width: 600px;
+    margin-top: 2em;
+    padding: 10px;
+    clear: left;
+    background-color: #272727;
+}
+
+a.name {
+    color: white;
+    font-size: 30px;
+}
+
+    a.name:hover {
+        color: white;
+    }
+
+h4.state {
 }
 
 div.park h2 {
@@ -25,14 +93,18 @@ div.park h4 {
 
 div.park p {
     grid-area: 3 / 2 / 4 / 3;
+    padding-top: 10px;
 }
+
+
+
 
 div.park-stats {
     width: 500px;
     margin: 10px;
     display: grid;
     grid-template-columns: 50% 50%; /*//assign column width*/
- }
+}
 
 /* weather */
 
@@ -70,4 +142,3 @@ div.week-weather {
 #weather-week-img {
     width: 100px;
 }
-
