@@ -9,7 +9,7 @@ using NPGeek.Web.DAL;
 namespace NPGeek.Web.Controllers
 {
 
-
+	//ar cheepo naro
     public class SurveyController : Controller
     {
 

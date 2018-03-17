@@ -5,20 +5,25 @@
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
-<h2>Survey Results</h2>
+
 
 @* list must include name, count of surveys*@
 @* only show parks with survey > 1 *@
 
-<div class="survey-results">
+<div class="surveyWrapper">
+    <div class="survey-results">
+        <h4></h4>
+        <h4>Survey Results</h4>
+        <h4>Survey Count</h4>
+    </div>
 
-    @foreach(var survey in Model)
+    @foreach (var survey in Model)
     {
-        <div class="survey-result">
+        <div class="survey-results">
             <img class="survey-img" src="~/Content/parks/@(survey.ParkCode.ToLower()).jpg" />
             <h2>@survey.ParkName</h2>
-            <span>@survey.SurveyCount</span>
+            <span>@survey.SurveyCount </span>
+
         </div>
     }
-
 </div>
