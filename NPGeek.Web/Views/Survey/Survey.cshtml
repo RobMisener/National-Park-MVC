@@ -7,28 +7,31 @@
     Layout = "~/Views/Shared/_LayoutPage.cshtml";
 }
 
-<h2>Survey</h2>
+<main class="survey-page">
 
-<form method="post" action="@Url.Action("Survey", "Survey")">
-    What is your favorite park?
-    <select name="parkCode">
-        @foreach(var park in Model)
-        {
-            <option value="@park.ParkCode">@park.Name</option>
-        }
-    </select>
-    Email Address
-    <input type="text" name="email" />
-    Home State
-    <input type="text" name="state" />
-    Activity Level
-    <select name="activityLevel">
-        <option value="ExtremelyActive">Extremely Active</option>
-        <option value="Active">Active</option>
-        <option value="Sedentary">Sedentary</option>
-        <option value="Inactive">Inactive</option>
-    </select>
 
-    <button> Submit</button>
+    <form method="post" action="@Url.Action("Survey", "Survey")">
+        What is your favorite park?
+        <select name="parkCode">
+            @foreach (var park in Model)
+            {
+                <option value="@park.ParkCode">@park.Name</option>
+            }
+        </select>
+        Email Address
+        <input type="text" name="email" />
+        Home State
+        <input type="text" name="state" />
+        Activity Level
+        <select name="activityLevel">
+            <option value="ExtremelyActive">Extremely Active</option>
+            <option value="Active">Active</option>
+            <option value="Sedentary">Sedentary</option>
+            <option value="Inactive">Inactive</option>
+        </select>
 
-</form>
+        <button> Submit</button>
+
+    </form>
+
+</main>

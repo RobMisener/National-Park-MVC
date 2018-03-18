@@ -12,9 +12,11 @@
     <div class="descriptionWrapper">
         <img class="parkPic" src="~/Content/parks/@(Model.ParkCode).jpg" />
         <div class="detail-header">
-            <h2>@Model.Name</h2>
-            <span>@Model.State</span>
-            <span>Founded in @Model.YearFounded</span>
+            <div class="park-title">
+                <h2 class="park-name">@Model.Name</h2>
+                <span class="park-state">(@Model.State)</span>
+            </div>
+            <span class="year">Founded in @Model.YearFounded</span>
             <div class="park-description">
                 @Model.ParkDescription
             </div>
