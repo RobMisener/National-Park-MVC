@@ -1,6 +1,6 @@
-# National Parks - Details, Weather and Survey
+# National Parks 
 
-<p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadme/7ba05a915a41aee7431c9845045d561d.gif" /> </p>
+<p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/7ba05a915a41aee7431c9845045d561d.gif" /> </p>
 
 ## Installation:
 Clone and run with Visual Studio and CORS chrome extension.
