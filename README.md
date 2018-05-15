@@ -13,3 +13,8 @@ Users may view the weather from each park and change temperature from fahrenheit
 
 ## Survey:
 In addition to a details page and the weather, the user may also fill out a form to indicate their favorite park. Their survey choice is store in a SQL database and adds to choices already made by other users. Users can view the page of the ranked results by clicking on the button.
+
+<p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/94f706422265ec6ba1250b4f28788a1f.gif" /> </p>
+
+
+
