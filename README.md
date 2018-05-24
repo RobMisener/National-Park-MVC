@@ -12,7 +12,7 @@ Clone and run with Visual Studio and CORS chrome extension.
 The National Parks Website allows users to browse national parks and find out more detailed information about them, including weather and descriptions. Users may also take a survey and vote for their favorite park.
 
 ## Weather:
-<p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/natpark3d.gif" /> </p>
+<p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/natpark3d.png" /> </p>
 
 Users may view the weather from each park and change temperature from Fahrenheit to Celsius. This is done through session ID to keep the changes relative to the person viewing the website.
 
