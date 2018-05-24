@@ -6,7 +6,7 @@
 <p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/7ba05a915a41aee7431c9845045d561d.gif" /> </p>
 
 ## Installation:
- *Clone and run with Visual Studio and CORS chrome extension.
+* Clone and run with Visual Studio and CORS chrome extension.
 
 ## Overview: 
 * The National Parks Website allows users to browse national parks and find out more detailed information about them 
