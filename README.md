@@ -9,16 +9,21 @@
 Clone and run with Visual Studio and CORS chrome extension.
 
 ## Overview: 
-The National Parks Website allows users to browse national parks and find out more detailed information about them, including weather and descriptions. Users may also take a survey and vote for their favorite park.
+* The National Parks Website allows users to browse national parks and find out more detailed information about them 
+* Users may see park descriptions, weather, vote in a survey and more
 
 ## Weather:
-*Users may view the weather from each park
-*Can change temperature from Fahrenheit to Celsius.
+* Users may view the weather from each park
+* Can also change temperature from Fahrenheit to Celsius
+* Temperature unit preference is stored in user's session ID, allowing multiple users different experiences
+
 <p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/natpark3d.png" /> </p>
-*Temperature unit preference is stored in user's session ID, allowing multiple users different experiences
+
 
 ## Survey:
-In addition to a details page and the weather, the user may also fill out a form to indicate their favorite park. Their survey choice is stored inside a SQL database and adds the vote to the vote count already existing. Users can view the page of the ranked results by clicking on the button below the survey fields.
+* User may vote in an online national parks survvey
+* Reslults are recorded in server database (SQL)
+* Users can view the survey results after submitting their choice
 
 <p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/94f706422265ec6ba1250b4f28788a1f.gif" /> </p>
 
