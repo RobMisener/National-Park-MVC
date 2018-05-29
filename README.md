@@ -2,6 +2,7 @@
 <a href="http://www.robertmisener.com"> My Portfolio Website </a>
 
 # National Parks 
+#### By: Robert Misener
 
 <p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/7ba05a915a41aee7431c9845045d561d.gif" /> </p>
 
@@ -26,6 +27,8 @@
 * Users can view the survey results after submitting their favorite park choice
 
 <p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/94f706422265ec6ba1250b4f28788a1f.gif" /> </p>
+
+<a href="http://www.robertmisener.com"> Visit My Portfolio Website </a>
 
 
 
