@@ -28,7 +28,7 @@
 
 <p align="center"> <img src="https://github.com/RobMisener/National-Park-MVC/raw/master/ImagesForReadMe/94f706422265ec6ba1250b4f28788a1f.gif" /> </p>
 
-<a href="http://www.robertmisener.com"> Visit My Portfolio Website </a>
+<a href="http://www.robertmisener.com"> See More Projects on My Portfolio Website </a>
 
 
 
